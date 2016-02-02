@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - indigo@localhost" uuid="0d4965da-b069-4464-8897-b813ca690757">
+    <database-info product="MySQL" version="5.6.22-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.34 ( Revision: jess.balint@oracle.com-20141014163213-wqbwpf1ok2kvo1om )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.2">
+      <schema id="1" name="indigo"/>
+      <table id="2" parent="1" name="accounts"/>
+      <table id="3" parent="1" name="users"/>
+      <column id="4" parent="2" name="ID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="5" parent="2" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="6" parent="2" name="balance">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="7" parent="2" name="account_number">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="8" parent="2" name="account_type">
+        <mandatory>1</mandatory>
+        <data-type>char(48)</data-type>
+        <default-expression>&apos;standard&apos;</default-expression>
+      </column>
+      <index id="9" parent="2" name="unique_ID">
+        <columns>ID</columns>
+        <unique>1</unique>
+      </index>
+      <key id="10" parent="2" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <key id="11" parent="2" name="unique_ID">
+        <columns>ID</columns>
+        <underlying-index>unique_ID</underlying-index>
+      </key>
+      <column id="12" parent="3" name="ID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="13" parent="3" name="Login">
+        <mandatory>1</mandatory>
+        <data-type>char(150)</data-type>
+      </column>
+      <column id="14" parent="3" name="Password">
+        <mandatory>1</mandatory>
+        <data-type>char(150)</data-type>
+      </column>
+      <key id="15" parent="3" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+  <data-source name="MySQL - pentango@localhost" uuid="446120f8-dee0-4b17-a188-8b2fbb7b4c7a">
+    <database-info product="MySQL" version="5.6.22-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.34 ( Revision: jess.balint@oracle.com-20141014163213-wqbwpf1ok2kvo1om )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.2">
+      <schema id="1" name="pentango"/>
+      <table id="2" parent="1" name="users"/>
+      <column id="3" parent="2" name="UserId">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="4" parent="2" name="FristName">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="5" parent="2" name="LastName">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="6" parent="2" name="Email">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="7" parent="2" name="Password">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <index id="8" parent="2" name="Email_UNIQUE">
+        <columns>Email</columns>
+        <unique>1</unique>
+      </index>
+      <key id="9" parent="2" name="Email_UNIQUE">
+        <columns>Email</columns>
+        <underlying-index>Email_UNIQUE</underlying-index>
+      </key>
+      <key id="10" parent="2" name="PRIMARY">
+        <columns>UserId</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+  <data-source name="MySQL - pentago@localhost" uuid="77a42fb0-3296-4f20-8780-6cb877187c7f">
+    <database-info product="MySQL" version="5.6.22-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.34 ( Revision: jess.balint@oracle.com-20141014163213-wqbwpf1ok2kvo1om )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.2">
+      <schema id="1" name="pentago"/>
+      <table id="2" parent="1" name="users"/>
+      <table id="3" parent="1" name="ai_players"/>
+      <table id="4" parent="1" name="double game"/>
+      <table id="5" parent="1" name="double_game_ai"/>
+      <table id="6" parent="1" name="game"/>
+      <column id="7" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="8" parent="2" name="login">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="9" parent="2" name="password">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="10" parent="2" name="email">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="11" parent="2" name="admin">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <index id="12" parent="2" name="login_UNIQUE">
+        <columns>login</columns>
+        <unique>1</unique>
+      </index>
+      <key id="13" parent="2" name="login_UNIQUE">
+        <columns>login</columns>
+        <underlying-index>login_UNIQUE</underlying-index>
+      </key>
+      <key id="14" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="15" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="16" parent="3" name="ai_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="17" parent="3" name="creation_date">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <index id="18" parent="3" name="ai_name_UNIQUE">
+        <columns>ai_name</columns>
+        <unique>1</unique>
+      </index>
+      <index id="19" parent="3" name="id_UNIQUE">
+        <columns>id</columns>
+        <unique>1</unique>
+      </index>
+      <key id="20" parent="3" name="ai_name_UNIQUE">
+        <columns>ai_name</columns>
+        <underlying-index>ai_name_UNIQUE</underlying-index>
+      </key>
+      <key id="21" parent="3" name="id_UNIQUE">
+        <columns>id</columns>
+        <underlying-index>id_UNIQUE</underlying-index>
+      </key>
+      <key id="22" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="23" parent="4" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="24" parent="4" name="player_one_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="25" parent="4" name="player_two_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="26" parent="4" name="beg_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="27" parent="4" name="end_time">
+        <data-type>datetime</data-type>
+      </column>
+      <key id="28" parent="4" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="29" parent="4" name="player1_fk">
+        <columns>player_one_id</columns>
+        <ref-key>users.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="30" parent="4" name="player2_fk">
+        <columns>player_two_id</columns>
+        <ref-key>users.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="31" parent="5" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="32" parent="5" name="player_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="33" parent="5" name="ai_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="34" parent="5" name="beg_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="35" parent="5" name="end_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <key id="36" parent="5" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="37" parent="5" name="ai_fk">
+        <columns>ai_id</columns>
+        <ref-key>ai_players.id_UNIQUE</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="38" parent="5" name="player_fk">
+        <columns>player_id</columns>
+        <ref-key>users.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="39" parent="6" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="40" parent="6" name="player">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="41" parent="6" name="player2">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="42" parent="6" name="player3">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="43" parent="6" name="beg">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="44" parent="6" name="end">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="45" parent="6" name="board_shape">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <key id="46" parent="6" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
