@@ -18,7 +18,7 @@ import java.util.List;
  * Created by Makda on 2016-01-27.
  */
 @RestController
-@RequestMapping(value = "/usersbadge")
+@RequestMapping(value = "/userscountry")
 public class UsersFromCountryController  {
     @Autowired
     private JdbcConnection jdbcConnection;

@@ -23,6 +23,10 @@ dependencies {
     compile 'org.springframework:spring-webmvc:4.1.6.RELEASE'
     compile 'org.springframework.boot:spring-boot-starter'
     compile 'org.springframework:spring-jdbc'
+    compile 'org.springframework:spring-context-support:4.2.4.RELEASE'
+
+    compile 'javax.mail:mail:1.4.7'
+
     compile 'com.h2database:h2'
     compile 'org.projectlombok:lombok:1.16.4'
     compile 'mysql:mysql-connector-java:5.1.6'
