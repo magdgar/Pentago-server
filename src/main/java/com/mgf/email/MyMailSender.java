@@ -14,6 +14,7 @@ public class MyMailSender extends JavaMailSenderImpl {
         setHost("smtp.gmail.com");
         setPort(587);
         setUsername("gargas.magdalena@gmail.com");
+        //TODO change password to work
         setPassword("----");
         setJavaMailProperties(new Properties(){{
             setProperty("mail.smtp.starttls.enable", "true");
